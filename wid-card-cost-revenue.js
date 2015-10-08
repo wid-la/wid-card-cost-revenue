@@ -27,6 +27,14 @@
       },
 
       /**
+       * month_names
+       * @type {Object}
+       */
+      monthNames: {
+        type: Object
+      },
+
+      /**
        * month01
        * @type {Object}
        */
