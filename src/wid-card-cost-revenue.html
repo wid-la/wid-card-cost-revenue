@@ -7,6 +7,7 @@
 
 <link rel="import" href="../wid-card-standard-behavior/wid-card-standard-behavior.html">
 <link rel="import" href="../wid-card-weight-behavior/wid-card-weight-behavior.html">
+<link rel="import" href="../wid-card-theme-behavior/wid-card-theme-behavior.html">
 <link rel="import" href="../wid-versatile-websocket/wid-versatile-websocket.html">
 <link rel="import" href="../wid-card-subscriptions-behavior/wid-card-subscriptions-behavior.html">
 
@@ -36,6 +37,7 @@ Example:
         overflow-y: auto;
         height: 100%;
         background-color: #fff;
+        overflow: visible;
       }
 
       #header {
@@ -102,7 +104,7 @@ Example:
       </template>
     </div>
 
-    <paper-material class="layout horizontal flex" elevation="3">
+    <paper-material id="mainContent" class="layout horizontal flex" elevation="3">
       <div id="header" class="flex">
         <div>[[name]]</div>
         <iron-icon src="/images/cards/outsourcing.svg"></iron-icon>
@@ -148,7 +150,12 @@ Example:
 
       is: 'wid-card-cost-revenue',
 
-      behaviors: [Polymer.WidCardStandardBehavior, Polymer.WidCardWeightBehavior, Polymer.WidCardSubscriptionsBehavior],
+      behaviors: [
+        Polymer.WidCardStandardBehavior, 
+        Polymer.WidCardWeightBehavior, 
+        Polymer.WidCardSubscriptionsBehavior, 
+        Polymer.WidCardThemeBehavior
+      ],
 
       properties: {
 
